@@ -2,6 +2,9 @@
 ## 抖音无水印720p多功能下载
 多线程下载抖音视频，全部为高清无水印，支持线程数为cpu数的五倍
 
+# 如果你觉得好用，给个星呗
+##  if you think it's nice, wish to give a star to me.
+
 ## Tiktok without watermark 720p multi-function Download
 Tiktok downloading video multichannel download, all HD HD no watermark, support thread count is five times CPU number.
 
