@@ -223,12 +223,16 @@ class video:
 
     def single_download(self):
         print("程序开始下载视频,请到F:\Single download\中查看")
+        
+        # you can change your download path here(for downloading single work)
         os.makedirs('F:/Single download', exist_ok=True)
         video_data = self.get_single_work_data()
         for name, url in video_data.items():
             # print(url)
             # 防止操作系统操作错误
             name = name.replace('\"', '')
+            
+            # you can change your download path here(for downloading single work)
             path = 'F:/{}/{}.mp4'.format(self.user_topic_music_name, name)
             response = requests.get(url=url, headers=self.download_headers, timeout=10).content
             with open(path, 'wb') as f:
@@ -239,6 +243,8 @@ class video:
     def download(self, url, name, datalen):
         # count为了防止暴力循环时卡住
         coun = 25
+        
+        # you can change your download path here(for downloading many works)
         path = 'F:/{}/{}.mp4'.format(self.user_topic_music_name, name)
         response = requests.get(url=url, headers=self.download_headers, timeout=10).content
         while response == b'':
@@ -291,6 +297,8 @@ class video:
             url_list.append(url)
         print("共收集到了{}个视频信息".format(len(video_data)))
         print("程序开始下载视频,请到F:\{}\中查看".format(self.user_topic_music_name))
+        
+        # you can change your download path here(for downloading single work)
         os.makedirs('F:/{}'.format(self.user_topic_music_name), exist_ok=True)
 
 
